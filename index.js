@@ -77,7 +77,7 @@ app.post("/", async (req, res) => {
 
     console.log({
       date: new Date(),
-      messages: JSON.stringify(messageContainer),
+      messages: JSON.stringify(messageContainer[data.id].slice(0, -2)),
     });
   } catch (e) {
     console.error(e);
