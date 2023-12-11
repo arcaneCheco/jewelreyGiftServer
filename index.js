@@ -43,7 +43,7 @@ app.post("/start", (req, res) => {
 });
 
 app.post("/openChatWindow", async (req, res) => {
-  if (!req.body || messageContainer[req.body]) {
+  if (!req.body || !messageContainer[req.body]) {
     res.send("");
     return;
   }
