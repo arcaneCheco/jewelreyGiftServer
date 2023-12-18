@@ -38,6 +38,10 @@ const systemMessage = {
 
 const messageContainer = {};
 
+app.post("/healthCheck", (req, res) => {
+  res.send("OK");
+});
+
 app.post("/start", (req, res) => {
   messageContainer[req.body] = [systemMessage];
 });
