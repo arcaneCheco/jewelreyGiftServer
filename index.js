@@ -38,7 +38,7 @@ const systemMessage = {
 
 const messageContainer = {};
 
-app.post("/healthCheck", (req, res) => {
+app.get("/healthCheck", (req, res) => {
   res.send("OK");
 });
 
